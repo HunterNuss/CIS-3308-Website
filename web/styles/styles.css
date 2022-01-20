@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 14, 2022, 7:34:33 PM
+    Author     : hunternuss
+*/
+
+html, body {  
+    margin:0; 
+    padding:0; 
+}
+
+/* This is the design of the text of the content and includes the layout of the background image. */
+body { 
+    
+    color: black; /* font */
+    font-family: "Verdana", "Verdana", Sans-Serif;
+    font-size:16px;
+    
+    background-image: url("../pictures/bookshelf5.png"); /* access the image */
+    background-repeat: no-repeat; /* does not repeat the image */
+    background-attachment: fixed;
+    background-size: cover; /* covers the enitre body */
+    background-position: bottom center;
+    
+    background-color:black    
+}
+
+/* This makes sure the header is fixed and above the rest of the page. It also changes the text. */
+#header { 
+
+    position:fixed; /* makes sure it always is at the top of the page */
+    top:0px;
+    left:0px;
+    z-index: 1; /* makes sure the header is above the rest of the page */
+    width: 100%;    
+
+    background-color:darkgray;
+
+    padding-bottom: 10px; 
+    color: black; /* font */
+    font-family: serif; 
+    font-weight: bold;
+}
+
+/* This is for the title in the header, and it changes the layout and makes sure it is not to close to the edge. */
+#title {
+    padding:12px;
+    padding-bottom: 0px;
+    font-size:48px;
+    letter-spacing: 1.5px;
+}
+
+/* This is for the navigation links to make sure they are in the correct poistion with correct padding. */
+#nav {
+    position: fixed; 
+    top: 0px;
+    right: 0px;
+    
+    font-size:24px;
+    font-family: "Stencil Std", Sans-Serif;
+    text-align:right;
+    
+    padding-bottom: 12px;
+    padding-top:32px;
+}
+
+
+/* This is to change the navigation links colors and other features. */
+#nav a {
+    text-decoration:none;  /* links are not underlinked */
+    color: black;
+    white-space: nowrap; /* prevents link text from wrapping when browser is narrow */
+}
+
+/* Adds padding to the content of the page (all of the text) so it is not too close to the side. */
+#content {
+
+    padding:12px;
+    padding-top: 80px; /* does not getting overlapped from header */
+    padding-bottom: 40px; /* does not get overlapped by the footer */
+    
+    color:white; /* contect font */
+}
+
+#nav a:link { /* changes the navigation links when its not clicked */
+    color: black;
+}
+
+#nav a:visited { /* changes the navigation links when it has been visited */
+    color: blue;
+}
+
+#nav a:hover { /* changes the navigation links when the cursor is hovering over it */
+    color: white;
+}
+
+#content a:link { /* changes the content links when its not clicked */
+    color: black;
+}
+
+#content a:visited { /* changes the content links when it has been visited */
+    color: lightblue;
+}
+
+#content a:hover { /* changes the content links when the cursor is hovering over it */
+    color: white;
+}
+
+/* Makes sure the footer is fixed and is avode the rest of the page. */
+#footer {
+    position: fixed; /* makes sure it always is at the top of the page */
+    bottom: 0px; 
+    left: 0px; 
+    z-index: 1; /* makes sure the header is above the rest of the page */
+    width:100%;
+    
+    background-color:darkgray;
+    
+    padding:10px;
+    color: black; /* font */
+    text-align:center;
+}
+
+/* Allows the page to be responsive when it gets small enough. */
+@media only screen and (max-width: 600px){
+    #header {
+        flex-direction: row; /* so it stays in a row */
+        justify-content: space-between; /* distributes space evenly */
+        padding-bottom: 2.5rem; /* increases header space vertically */
+    }
+
+/* Navigation links */
+    #nav {
+        padding-top: 4.5rem; /* Separates the links from the title */
+        font-size: 1.5rem;
+    }
+
+    #content {
+        padding-top: 6rem; /* makes sure the is enough room that the content in not covered */
+    }
+    
+}

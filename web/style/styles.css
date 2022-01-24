@@ -7,6 +7,9 @@ and open the template in the editor.
     Created on : Jan 14, 2022, 7:34:33 PM
     Author     : hunternuss
 */
+* { 
+    box-sizing: border-box;
+}
 
 html, body {  
     margin:0; 
@@ -15,22 +18,22 @@ html, body {
 
 /* This is the design of the text of the content and includes the layout of the background image. */
 body { 
-    
+
     color: black; /* font */
     font-family: "Verdana", "Verdana", Sans-Serif;
     font-size:16px;
-    
+
     background-image: url("../pictures/bookshelf5.png"); /* access the image */
     background-repeat: no-repeat; /* does not repeat the image */
     background-attachment: fixed;
     background-size: cover; /* covers the enitre body */
     background-position: bottom center;
-    
+
     background-color:black    
 }
 
 /* This makes sure the header is fixed and above the rest of the page. It also changes the text. */
-#header { 
+#titleNav { 
 
     position:fixed; /* makes sure it always is at the top of the page */
     top:0px;
@@ -39,6 +42,13 @@ body {
     width: 100%;    
 
     background-color:darkgray;
+
+    /*    display:flex; 
+        flex-direction: column; 
+    
+        padding: 0.5rem;*/
+    box-shadow: 0px 0px 5px black;  
+
 
     padding-bottom: 10px; 
     color: black; /* font */
@@ -59,13 +69,14 @@ body {
     position: fixed; 
     top: 0px;
     right: 0px;
-    
-    font-size:24px;
-    font-family: "Stencil Std", Sans-Serif;
+
     text-align:right;
-    
+
     padding-bottom: 12px;
     padding-top:32px;
+    padding-right: 1rem;
+    white-space: nowrap;  /* don't allow nav links to wrap */
+
 }
 
 
@@ -74,15 +85,28 @@ body {
     text-decoration:none;  /* links are not underlinked */
     color: black;
     white-space: nowrap; /* prevents link text from wrapping when browser is narrow */
+
+    font-size:22px;
+    font-family: "Stencil Std", Sans-Serif;
+}
+
+#nav div {
+    text-decoration:none;  /* links are not underlinked */
+    color: black;
+    white-space: nowrap; /* prevents link text from wrapping when browser is narrow */
+
+    font-size:22px;
+    font-family: "Stencil Std", Sans-Serif;
 }
 
 /* Adds padding to the content of the page (all of the text) so it is not too close to the side. */
 #content {
-
     padding:12px;
     padding-top: 80px; /* does not getting overlapped from header */
     padding-bottom: 40px; /* does not get overlapped by the footer */
-    
+    line-height: 2rem;
+    font-size: 1.15rem;
+
     color:white; /* contect font */
 }
 
@@ -91,7 +115,7 @@ body {
 }
 
 #nav a:visited { /* changes the navigation links when it has been visited */
-    color: blue;
+    color: #424242;
 }
 
 #nav a:hover { /* changes the navigation links when the cursor is hovering over it */
@@ -117,23 +141,45 @@ body {
     left: 0px; 
     z-index: 1; /* makes sure the header is above the rest of the page */
     width:100%;
-    
+
     background-color:darkgray;
-    
+
     padding:10px;
     color: black; /* font */
     text-align:center;
+
+    box-shadow: 0px 0px 5px #888888;  
+
+}
+
+.indent {
+    margin-left: 1.5rem;
+}
+
+pre {
+    margin-bottom:1.5rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    line-height:1.25rem;
+    font-size: 0.95rem;
+
+    padding:0.5rem;
+    padding-left:0rem;
+    background-color: #CCCCDD; 
+
+    border-radius: 0.25rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.4);
 }
 
 /* Allows the page to be responsive when it gets small enough. */
 @media only screen and (max-width: 600px){
-    #header {
+    #titleNav {
         flex-direction: row; /* so it stays in a row */
         justify-content: space-between; /* distributes space evenly */
-        padding-bottom: 2.5rem; /* increases header space vertically */
+        padding-bottom: 3rem; /* increases header space vertically */
     }
 
-/* Navigation links */
+    /* Navigation links */
     #nav {
         padding-top: 4.5rem; /* Separates the links from the title */
         font-size: 1.5rem;
@@ -142,5 +188,5 @@ body {
     #content {
         padding-top: 6rem; /* makes sure the is enough room that the content in not covered */
     }
-    
+
 }

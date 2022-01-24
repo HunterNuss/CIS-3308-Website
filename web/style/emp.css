@@ -1,0 +1,16 @@
+.emp {  /* applies to any dom element that's classed "emp" */
+    background-color: black;
+    padding-top: 2rem;
+    margin: 2rem;  /* spacing between images */
+    text-align: center; /* center in container */
+}
+
+.emp .imageContainer { /* applies to any div that's in an "emp" dom element */
+    width: 100%;
+}
+
+.emp img { /* applies to any img tag that's in an "emp" dom element */
+    width:60%;
+    border-radius:30rem; /* image border (oval) */
+    box-shadow: 0.3rem 0.3rem 0.2rem rgba(0,0,0,0.8);
+}

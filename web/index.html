@@ -1,113 +1,70 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-<!--        This title tag changes the title of the website when you look at the tab in a web browser.-->
         <title>Bookmarked</title>
+        <meta charset="UTF-8">
 
-<!--        The two lines below allow me to refernce the external sytle sheet. The second line is what references 
-        it, but the first line is required to make it work.-->
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    </head>
-    
-    <body>
-        
-<!--        The head id includes the tile and the navigation links. The links will be used to traverse to 
-        different pages on the same website.-->
-        <div id="header">
 
-<!--            This is the tile that is displayed at the top of the screen in the header.-->
+        <link rel="stylesheet" type="text/css" href="style/styles.css">
+        <link href="style/NavRouter.css" rel="stylesheet" type="text/css" /> 
+        <link rel="stylesheet" type="text/css" href="style/emp.css">
+
+    </head>
+    <body>
+        <div id="titleNav">
             <div id="title">
                 Bookmarked
             </div>
-
-<!--            This is the navigation links that the user can access to traverse the website.-->
             <div id="nav">
-                <a href="index.html">Home</a>
-                &nbsp; 
-                <a href="blog.html">Blog</a>
-                &nbsp; 
-                &nbsp; 
-            </div>
 
+            </div>
         </div>
 
-<!--        The content id is all of the text on the home screen other than the header and the footer. This all 
-        includes about, the "other" database, experience, and an overview of the homework.-->
-        <div id="content">
-            
-<!--            The about portion of the page just allows the user to understand what this website is and how it can 
-            be used. It also includes a link to a similar website.-->
-            <h2><u>About</u></h2>
-     
-            <p>Have you read a book and don't want to forget about it? You can save it. </p>
-            
-            <p>Have you heard about a book that you want to read? Add it to the list.</p>
-            
-            <p>
-               This site is a way for those who enjoy reading to organize and keep track or books they have read. 
-               Having the option to add the book information, save the price, rate the book will allow you to 
-               make sure you always know what to read next. Encouraging users to add as many books as they 
-               would like to increase their range of book categories and to fuel their passion of reading. 
-            </p>
-            
-            <p>This page is similar to the website GoodReads: </p>
-            <a href= "https://www.goodreads.com/">goodreads.com</a>
-            
-<!--            This is the "other" database explanation. It includes the title and the description including a list 
-            of all included sections.-->
-            <h2><u>Database</u></h2>
-            
-            <p>
-                This database table will allow the user to add the following to keep track of their books.
-            </p>
-            <ul>
-                <li>Book Title</li>
-                <li>Author's Name</li>
-                <li>Description</li>
-                <li>Rating</li>
-                <li>Price</li>
-                <li>If a Book Has Been Read or Not</li>
-            </ul>
-            
-<!--            This portion just describes my experience with web development and web design.-->
-            <h2><u>Experience</u></h2>
-            <p>
-                I do not have any experience web design or web development. I began to learn JavaScript a while 
-                ago but didn't continue since I figured it would be more beneficial to learn it in a class. Since 
-                I have no experience, I hope to learn a lot in this class. I want to be able to work with web 
-                applications after this semester and having even the most basic knowledge can help with that.
-            </p>
-            
-<!--            This is my overview of homework 1, the home page. Here I talk about what was difficult, what was 
-            easy, and what was useful.-->
-            <h2><u>Homework 1</u></h2>
-            <p>
-               There were a few challenges I had when completing this lab. I created an external style sheet 
-               which was easy but figuring out how to reference it was a little difficult. Once I figured out how 
-               to do that I understood it better. I also had problems with making the titleNav responsive. I had 
-               the code to make it responsive, but having the proper padding was a bit confusing to get right. The tutorials and 
-                examples that were provided were very useful for this assignment and helped me with a majority of 
-                my problems.
-            </p>
-            
-            <p>
-                The rest of the lab was relatively easy. Changing the text and colors were straight forward.
-                Understanding all the id's was not difficult since they are named reasonably. Even including an 
-                image as the background was easy since there were examples on how to do it. 
-            </p>
-            
-            <p>
-                This lab was very useful in general since it allow me to work with a lot of the basics of creating a 
-                website. A lot of it was covered in the lab activity, but the additional requirements had helped me 
-                understand the layout of the website a lot more.
-            </p>
 
-<!--            For the footer id, there is only my name in it-->
+        <div id="content">
+
         </div> 
+
         <div id="footer">
             Hunter Nuss
         </div>
+
+        <script>"use strict";</script>
+        <script src="js/content/empContent.js"></script>
+        <script src="js/content/blogContent.js"></script>
+        <script src="js/content/homeContent.js"></script>
+
+        <script src="js/reusable/MakeEmp.js"></script>
+
+        <script src="js/reusable/MakeNavRouter.js"></script>
+
+
+
+        <script>
+            var myNavList = [
+
+                // action attribute is a function name - no quotes aroudnd home.
+                {linkText: "Home", linkURL: "#/home", action: homeContent},
+
+                // action attribute is a function name - no quotes around blog.
+                {linkText: "Blog", linkURL: "#/blog", action: blogContent},
+
+                // Adding search to the header, and having the employee link under it.
+                {header: 'Search',
+                    subMenu: [
+                        {linkText: "Employee", linkURL: "#/employee", action: empContent}
+                    ]
+                }
+            ];
+
+            var myNav = MakeNavRouter({
+                navId: "nav", // this is where the nav bar will be injected
+                navList: myNavList, // the list of link objects (linkText, linkURL, actions)
+                contentId: "content", // the id where content is to be injected
+                startLink: "#/home"     // routing will set this as the first link. 
+            });
+
+        </script>  
     </body>
 </html>

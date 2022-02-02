@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="style/styles.css">
         <link href="style/NavRouter.css" rel="stylesheet" type="text/css" /> 
         <link rel="stylesheet" type="text/css" href="style/emp.css">
+        <link rel="stylesheet" type="text/css" href="style/book.css">
 
     </head>
     <body>
@@ -16,6 +17,7 @@
             <div id="title">
                 Bookmarked
             </div>
+
             <div id="nav">
 
             </div>
@@ -31,11 +33,15 @@
         </div>
 
         <script>"use strict";</script>
-        <script src="js/content/empContent.js"></script>
+
         <script src="js/content/blogContent.js"></script>
+        <script src="js/content/bookContent.js"></script>
+        <script src="js/content/empContent.js"></script>
         <script src="js/content/homeContent.js"></script>
 
+        <script src="js/reusable/MakeBook.js"></script>
         <script src="js/reusable/MakeEmp.js"></script>
+
 
         <script src="js/reusable/MakeNavRouter.js"></script>
 
@@ -53,7 +59,8 @@
                 // Adding search to the header, and having the employee link under it.
                 {header: 'Search',
                     subMenu: [
-                        {linkText: "Employee", linkURL: "#/employee", action: empContent}
+                        {linkText: "Employee", linkURL: "#/employee", action: empContent},
+                        {linkText: "My Objects", linkURL: "#/myobjects", action: bookContent}
                     ]
                 }
             ];

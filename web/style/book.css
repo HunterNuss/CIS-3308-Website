@@ -1,0 +1,63 @@
+.book {
+    background-color: gray;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    margin: 1rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.book .hiddenElement {
+    position:relative; 
+}
+
+.book .hiddenElement div {
+    position:absolute; 
+    top:0; 
+    left:0; 
+    opacity:0;
+
+    top: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.book .hiddenElement:hover img {
+    opacity:0;
+}
+
+.book .hiddenElement:hover div {
+    opacity:1;
+}
+
+.book img {
+    padding-top: 0.5rem;
+
+    justify-content: center;
+    display:flex; 
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 20rem;
+    height: 30rem;
+    object-fit: contain;
+}
+
+.book div {
+    justify-content: center;
+    display:flex; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book button {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book input {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}

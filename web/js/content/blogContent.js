@@ -69,11 +69,33 @@
                     files in the lab activity, creating them for this homework did not take long. All of the employee files 
                     were straight forward and it was easy to convert to my website.
                 </p>
-    
+           
                 <p>
                     Like last week, the sample code and the lab activity was very useful. This homework was very similar 
                     so it was only changing a few things. Also, working with the nav router allowed me to understand it a 
                     lot better than the lab activity.
+                </p>
+            
+                &nbsp
+
+                <h3><u>Homework 3</u></h3>
+                <p>
+                    For this weeks homework I didn't have many challenges, but the two that I did have took me a long time to figure 
+                    out how to do it. The first challenge was creating the date changer. I wanted something other than a text box and 
+                    button I made that. Since we never learned how to do this, it took some time to understand its functions. The 
+                    second thing that was challenging was having the image disappear and show the description. This took me the longest time 
+                    to figure out, but I then realized it had to do with visiblity in the css file.
+                </p>
+            
+                <p>
+                    The rest of the homework was simple since there was a lot of sample code and it was the same as the lab activity and 
+                    last weeks homework. Creating the buttons, text boxes and the image did not take long and was straight forward. Making sure 
+                    they were public/private was simple as well.
+                </p>
+            
+                <p>
+                    As I said previously, there was a lot of source code and it helped a lot when I got stuck on something. Also the lectures 
+                    help a lot since she explained everything that was in the code and made sure we understoon the concepts.
                 </p>
     `;
                 var ele = document.createElement("div");

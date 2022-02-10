@@ -12,15 +12,15 @@
                     <li>Book Title</li>
                     <li>Author's Name</li>
                     <li>Description</li>
-                    <li>Rating</li>
                     <li>Price</li>
-                    <li>If a Book Has Been Read or Not</li>
+                    <li>Release Date</li>
+                    <li>Book Image</li>
                 </ul>
 
                 &nbsp
 
 
-                <h3><u>Experience</u></h3>
+                <h3><u>Web App Experience</u></h3>
                 <p>
                     I do not have any experience web design or web development. I began to learn JavaScript a while 
                     ago but didn't continue since I figured it would be more beneficial to learn it in a class. Since 
@@ -29,7 +29,17 @@
                 </p>
     
                 &nbsp
+            
+                <h3><u>Database Experience</u></h3>
+                <p> 
+                    I have not had any database experience that would be useful for this class. The only database I 
+                    used before was Firebase, which I have limited experience with, and it is a document store database. 
+                    I have never used a SQL database before. I have wanted to learn it before for projects, but have never 
+                    gotten around to it.
+                </p>
     
+                &nbsp
+            
                 <h3><u>Homework 1</u></h3>
                 <p>
                     There were a few challenges I had when completing this lab. I created an external style sheet 
@@ -97,6 +107,26 @@
                     As I said previously, there was a lot of source code and it helped a lot when I got stuck on something. Also the lectures 
                     help a lot since she explained everything that was in the code and made sure we understoon the concepts.
                 </p>
+            
+                &nbsp
+
+                <h3><u>Homework 4</u></h3>
+                <p>
+                    This homework was very simple, I did not have any problems with creating the database table.
+                </p>
+            
+                <p>
+                    The entire homework was very easy since it was just a continuation of the lab activity. Creating the table, 
+                    the foreign key, adding records, creating errors and joining the tables had already been done before. If I couldn't remember how to do something
+                    then I would just be able to look back at the lab activity.
+                </p>
+                <p>
+                    The tutorial that is on the professors website was useful for figuring out certain parts. When I coulding remember how to join  
+                    tables, I was able to look back at the document. Also, as I said previously, the lab activity document was very useful for 
+                    remembering how to complete tasks.
+                </p>
+            
+                Click <a target="_blank" href='Nuss_Web_Database.pdf'>here</a> to see my database document
     `;
                 var ele = document.createElement("div");
                 ele.innerHTML = content;

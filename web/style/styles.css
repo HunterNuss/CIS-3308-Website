@@ -19,7 +19,7 @@ html, body {
 /* This is the design of the text of the content and includes the layout of the background image. */
 body { 
 
-    color: black; /* font */
+    color: white; /* font */
     font-family: "Verdana", "Verdana", Sans-Serif;
     font-size:16px;
 
@@ -123,7 +123,7 @@ body {
 }
 
 #content a:link { /* changes the content links when its not clicked */
-    color: black;
+    color: blue;
 }
 
 #content a:visited { /* changes the content links when it has been visited */

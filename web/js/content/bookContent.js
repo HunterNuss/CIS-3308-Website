@@ -22,6 +22,18 @@
                 box-sizing: border-box; /* makes padding and border counted in the width */
             }
             
+            @media only screen and (max-width: 1200px) {
+                 .flexContainer {
+                    flex-direction:column;
+                    width: 60%;
+                }
+                .flexContainer .book {
+                    width: 80%;
+                    justify-content: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }  
         </style>
         <p>This page displays relevent information of the books below. Change the information by using the text inputs, 
             buttons, and the date changer. The title and author are text characters and the price is a number. View the 
@@ -29,9 +41,9 @@
         </p>
     `;
                 var ele = document.createElement("div");
-                ele.innerHTML = content; // the HTML code specified just above...
+                ele.innerHTML = content;
                 var bookContainer = document.createElement("div");
-                bookContainer.classList.add('flexContainer'); // see styling in this file, above...
+                bookContainer.classList.add('flexContainer');
                 ele.appendChild(bookContainer);
                 bookContainer.appendChild(MakeBook({title: "The Road",
                         author: "Cormac McCarthy",

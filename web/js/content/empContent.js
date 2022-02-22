@@ -23,6 +23,19 @@
                 box-sizing: border-box; /* makes padding and border counted in the width */
     
             }
+            
+            @media only screen and (max-width: 1000px) {
+                 .flexContainer {
+                    flex-direction:column;
+                    width: 90%;
+                }
+                .flexContainer .emp {
+                    width: 75%;
+                    justify-content: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
         </style>
         <h3 style="justify-content: center;
                 display:flex; 

@@ -1,0 +1,44 @@
+
+/* This style sheet has styles that are applicable only to an element styled "clickSort".
+
+Our CSS file naming convention (like the JS file naming convention) helps organize 
+the CSS styles: "A component specific CSS file shall be
+named for the component it styles. All styles within the style sheet shall be prefixed
+by a single CSS class which is named the same as the CSS file." 
+
+This "localizes CSS style rules" and allows us to "bundle" the styling of a component with the 
+JavaScript code that creates the clickSort component. 
+
+We (providers of the clickSort component) provide nice styling intitially, but the 
+HTML coder has access to these styles and can change them however they want. 
+
+*/
+
+
+.clickSort {  
+    text-align:center;
+    justify-content: center;
+}
+
+.clickSort table {
+    margin:auto;     
+    margin-top: 1rem; 
+    padding: 1rem;
+}
+
+.clickSort th {  
+    padding: 0.25rem;
+    background-color: #35607a;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.clickSort td {  
+    padding: 0.25rem;
+    background-color: #8c8c8c;
+    max-width: 16rem;
+}
+
+.clickSort img {
+    border-radius: 1rem;
+}

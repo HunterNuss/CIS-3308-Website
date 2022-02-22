@@ -1,0 +1,57 @@
+[
+    {
+        "userEmail": "abha@temple.edu",
+        "bookId": "11",
+        "bookTitle": "The Road",
+        "authorName": "Cormac McCarthy",
+        "price": "12",
+        "releaseDate": "09/26/2006",
+        "bookImage": "https://m.media-amazon.com/images/I/41t25tFQJ4L.jpg",
+        "description": "A father and son journey on foot across a post-apocalyptic world",
+        "webUserID": "6"
+    },
+    {
+        "userEmail": "dominic@temple.edu",
+        "bookId": "12",
+        "bookTitle": "The Mist",
+        "authorName": "Steven King",
+        "price": "11",
+        "releaseDate": "08/29/1980",
+        "bookImage": "https://m.media-amazon.com/images/I/51loMEUwc5L._AC_SY780_.jpg",
+        "description": "A unnaturally thick cloud of mist spreads across a small town",
+        "webUserID": "7"
+    },
+    {
+        "userEmail": "frank@temple.edu",
+        "bookId": "13",
+        "bookTitle": "War and Peace",
+        "authorName": "Leo Tolstoy",
+        "price": "",
+        "releaseDate": "",
+        "bookImage": "",
+        "description": "",
+        "webUserID": "10"
+    },
+    {
+        "userEmail": "ed@temple.edu",
+        "bookId": "14",
+        "bookTitle": "Lord of the Rings",
+        "authorName": "J. R. R. Tolkien",
+        "price": "14",
+        "releaseDate": "07/29/1954",
+        "bookImage": "https://m.media-amazon.com/images/I/51bJhsl5VmL.jpg",
+        "description": "The fate of the world depends on a yound Hobbit destroying a ring",
+        "webUserID": "9"
+    },
+    {
+        "userEmail": "eduard@temple.edu",
+        "bookId": "17",
+        "bookTitle": "Fahrenheit 451",
+        "authorName": "Ray Bradbury",
+        "price": "8.30",
+        "releaseDate": "10/19/1953",
+        "bookImage": "https://m.media-amazon.com/images/I/41qI9quGIdL.jpg",
+        "description": "A future American society where books are outlawed and firemen burn any that are found",
+        "webUserID": "8"
+    }
+]

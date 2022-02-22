@@ -23,11 +23,11 @@
 }
 
 .book .hiddenElement:hover img {
-    opacity:0;
+    opacity: 0;
 }
 
 .book .hiddenElement:hover div {
-    opacity:1;
+    opacity: 1;
 }
 
 .book img {
@@ -60,4 +60,12 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .book img {
+        width: 10rem;
+        height: 15rem;
+    }
 }

@@ -17,6 +17,7 @@
                     <li>Book Image</li>
                 </ul>
 
+
                 &nbsp
 
 
@@ -28,7 +29,9 @@
                     applications after this semester and having even the most basic knowledge can help with that.
                 </p>
     
+    
                 &nbsp
+            
             
                 <h3><u>Database Experience</u></h3>
                 <p> 
@@ -38,7 +41,9 @@
                     gotten around to it.
                 </p>
     
+    
                 &nbsp
+            
             
                 <h3><u>Homework 1</u></h3>
                 <p>
@@ -62,7 +67,9 @@
                     understand the layout of the website a lot more.
                 </p>
     
+    
                 &nbsp
+    
     
                 <h3><u>Homework 2</u></h3>
                 <p>
@@ -86,7 +93,9 @@
                     lot better than the lab activity.
                 </p>
             
+            
                 &nbsp
+
 
                 <h3><u>Homework 3</u></h3>
                 <p>
@@ -108,7 +117,9 @@
                     help a lot since she explained everything that was in the code and made sure we understoon the concepts.
                 </p>
             
+            
                 &nbsp
+
 
                 <h3><u>Homework 4</u></h3>
                 <p>
@@ -120,13 +131,41 @@
                     the foreign key, adding records, creating errors and joining the tables had already been done before. If I couldn't remember how to do something
                     then I would just be able to look back at the lab activity.
                 </p>
+            
                 <p>
                     The tutorial that is on the professors website was useful for figuring out certain parts. When I coulding remember how to join  
                     tables, I was able to look back at the document. Also, as I said previously, the lab activity document was very useful for 
                     remembering how to complete tasks.
                 </p>
             
-                Click <a target="_blank" href='Nuss_Web_Database.pdf'>here</a> to see my database document
+                <p>
+                    Click <a target="_blank" href='Nuss_Web_Database.pdf'>here</a> to see my database document
+                </p>
+
+
+                &nbsp
+            
+            
+                <h3><u>Homework 5</u></h3>
+                <p>
+                    This homework took a little longer since it required a lot of small parts to make the table. The parts that were a 
+                    little difficult were combining the filter and the click sort. I had both of them separately, but combining them together 
+                    was difficult since I didn't want to mess up the code I already had. I also had some trouble with making it reversible when clicking 
+                    on a column again. There were not other big problems when creating the table, but I did have a lot of small problems that I continuously 
+                    had to fix.
+                </p>
+                    
+                <p>
+                    This homework was relatively easy since there was a lot of sample code to look at. Creating the table, making it filterable, and 
+                    clicksortable (separately), using AJAX, and using the Nav Router were easily completed. Much of it was done in the lab activity 
+                    and I was able to use that to complete it.
+                </p>
+            
+                <p>
+                    The resources provided were very helpful since it provided a lot of the code required. The lab activity that was very similar 
+                    and I relied on that a lot to complete it. Also, the professors website was helpful since it explained all of the topics and 
+                    allowed me to understand it before fully working on it.
+                </p>
     `;
                 var ele = document.createElement("div");
                 ele.innerHTML = content;

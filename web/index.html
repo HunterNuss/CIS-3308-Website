@@ -42,6 +42,8 @@
         <script src="js/content/catalogContent.js"></script>
         <script src="js/content/empContent.js"></script>
         <script src="js/content/homeContent.js"></script>
+        <script src="js/content/liveCatalogContent.js"></script>
+        <script src="js/content/liveUserContent.js"></script>
         <script src="js/content/userContent.js"></script>
 
 
@@ -72,7 +74,18 @@
                         {linkText: "Employee", linkURL: "#/employee", action: empContent},
                         {linkText: "My Objects", linkURL: "#/myobjects", action: bookContent},
                         {linkText: "Users", linkURL: "#/user", action: userContent},
-                        {linkText: "Catalog", linkURL: "#/catalog", action: catalogContent}
+                        {linkText: "Catalog", linkURL: "#/catalog", action: catalogContent},
+                        {linkText: "Live Users", linkURL: "#/liveuser", action: liveUserContent},
+                        {linkText: "Live Catalog", linkURL: "#/livecatalog", action: liveCatalogContent}
+                    ]
+                },
+                
+                {header: 'Tutorial',
+                    subMenu: [
+                        {linkText: "Proposal", linkURL: "#/proposal", action: "tutorial/proposal.pdf"},
+                        {linkText: "Proof of Concept", linkURL: "#/tutPOC", action: "tutorial/poc.html"},
+                        {linkText: "Tutorial Home", linkURL: "#/tutHome", action: "tutorial/index.html"},
+                        {linkText: "Demo", linkURL: "#/tutDemo", action: "tutorial/download/demo.html"}
                     ]
                 }
             ];

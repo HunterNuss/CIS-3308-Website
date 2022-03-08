@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Proof of Concept</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            .openModal {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            .modal {
+                display: none; 
+                position: absolute; 
+                z-index: 1; 
+                padding-top: 100px; 
+                left: 0;
+                top: 0;
+                width: 100%; 
+                height: 100%; 
+                overflow: auto;
+
+                background-color: white; 
+                background-color: rgba(0,0,0,0.4);
+
+            }
+
+            .modal-content {
+                background-color: white;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 50%;
+                text-align: center;
+            }
+
+
+
+
+            .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+
+
+            #img-zoom-box {
+                width: 350px;
+                height: auto;
+                position: relative;
+                margin-top: 10px;
+
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #img-1 {
+                width: 100%;
+                height: auto;
+            }
+
+            #img-zoom-box:hover, #img-zoom-box:active {
+                cursor: zoom-in;
+                display: block;
+            }
+
+            #img-zoom-box:hover #img-2, #img-zoom-box:active #img-2 {
+                opacity: 1;
+            }
+
+            #img-2 {
+                width: 200px;
+                height: 200px;
+                box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+
+                /* border */
+                pointer-events: none;
+                position: absolute;
+                opacity: 0;
+                /*                border: 4px solid whitesmoke;*/
+                z-index: 3;
+                border-radius: 100%;
+                display: none;
+                transition: opacity .2s;
+            }
+
+
+
+
+
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            .prev, .next {
+                cursor: pointer;
+                padding: 16px;
+                margin-top: -22px;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+            }
+
+            #arrowButtons {
+                justify-content: center;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                width: 500px;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+            }
+
+
+        </style>
+
+        <h2>The Library</h2>
+        <p>
+            Click on the book title or author's name to view the modal.
+        </p>
+
+        <br/>
+        <div id="modalButton">
+                The Mist
+                <br/>
+                Steven King
+        </div>
+        
+        <br/>
+        
+
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <div id="img-zoom-box">
+
+
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982103521/the-mist-9781982103521_hr.jpg" id="img-1">
+                        </div>
+
+
+                        <div class="mySlides fade">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81gODNFD-AS.jpg" id="img-1">
+                        </div>
+
+
+                    </div>
+                    <br>
+
+                    <div id="img-2"></div>
+                </div>
+
+                <div id="arrowButtons">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // modal
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            var modalButton = document.getElementById("modalButton");
+
+            modalButton.onclick = function () {
+                modal.style.display = "block";
+            };
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            var currentImage = null;
+            var flag = true;
+
+
+            // zoom click
+            var zoomEffect = document.getElementById("img-zoom-box");
+
+            zoomEffect.onclick = function () {
+                if (flag) {
+                    flag = false;
+                    document.getElementById("img-2").style.display = "block";
+                    document.getElementById("img-zoom-box").style.cursor = "zoom-out";
+                } else {
+                    flag = true;
+                    document.getElementById("img-2").style.display = "none";
+                    document.getElementById("img-zoom-box").style.cursor = "zoom-in";
+                }
+            }
+
+
+            // zoom effect
+            function zoomEvent(e) {
+                var slides = document.getElementsByClassName("mySlides");
+                var original = slides[slideIndex - 1];
+                var magnified = document.querySelector('#img-2');
+
+
+                var style = magnified.style;
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                var imgWidth = original.offsetWidth;
+                var imgHeight = original.offsetHeight;
+                var xperc = ((x / imgWidth) * 100);
+                var yperc = ((y / imgHeight) * 100);
+
+
+                //lets user scroll past right edge of image
+                if (x > (.01 * imgWidth)) {
+                    xperc += (.15 * xperc);
+                }
+
+                //lets user scroll past bottom edge of image
+                if (y >= (.01 * imgHeight)) {
+                    yperc += (.15 * yperc);
+                }
+
+
+                style.backgroundPositionX = (xperc - 9) + '%';
+                style.backgroundPositionY = (yperc - 9) + '%';
+
+                style.left = (x - 180) + 'px';
+                style.top = (y - 180) + 'px';
+
+            }
+
+            let zoom = function () {
+                document.querySelector('#img-zoom-box')
+                        .addEventListener('mousemove', zoomEvent, false);
+            }();
+
+
+
+
+
+            // slideshow
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) {
+                    slideIndex = slides.length;
+                }
+
+                if (n < 1) {
+                    slideIndex = 1;
+                }
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+
+                let imageUrl = slides[slideIndex - 1].childNodes[1].src;
+
+                document.getElementById("img-2").style.background = "url(" + imageUrl + ") no-repeat";
+            }
+
+        </script>
+    </body>
+</html>

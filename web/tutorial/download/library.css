@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 24, 2022, 3:48:03 PM
+    Author     : hunternuss
+*/
+
+.library {
+
+}
+
+.library .openModal {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.library .modal {
+    display: none; 
+    position: absolute; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+
+    background-color: white; 
+    background-color: rgba(0,0,0,0.4);
+
+}
+
+.library .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+}
+
+
+
+
+.library .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.library .close:hover,
+.library .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.library #img-zoom-box {
+    width: 350px;
+    height: auto;
+    position: relative;
+    margin-top: 10px;
+
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-1 {
+    width: 100%;
+    height: auto;
+}
+
+#img-zoom-box:hover, #img-zoom-box:active {
+    cursor: zoom-in;
+    display: block;
+}
+
+#img-zoom-box:hover #img-2, #img-zoom-box:active #img-2 {
+    opacity: 1;
+}
+
+#img-2 {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+
+    /* border */
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    /*                border: 4px solid whitesmoke;*/
+    z-index: 3;
+    border-radius: 100%;
+    display: none;
+    transition: opacity .2s;
+}
+
+
+
+
+
+.library .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.library .prev, .next {
+    cursor: pointer;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+#arrowButtons {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 500px;
+}
+
+.library .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}

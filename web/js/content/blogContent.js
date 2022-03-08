@@ -52,16 +52,12 @@
                     to do that I understood it better. I also had problems with making the titleNav responsive. I had 
                     the code to make it responsive, but having the proper padding was a bit confusing to get right. The tutorials and 
                     examples that were provided were very useful for this assignment and helped me with a majority of 
-                    my problems.
-                </p>
-
-                <p>
+                    my problems. <br>
+               
                     The rest of the lab was relatively easy. Changing the text and colors were straight forward.
                     Understanding all the id's was not difficult since they are named reasonably. Even including an 
-                    image as the background was easy since there were examples on how to do it. 
-                </p>
+                    image as the background was easy since there were examples on how to do it. <br>
 
-                <p>
                     This lab was very useful in general since it allow me to work with a lot of the basics of creating a 
                     website. A lot of it was covered in the lab activity, but the additional requirements had helped me 
                     understand the layout of the website a lot more.
@@ -77,17 +73,13 @@
                     activity, adding it didn't create too many problems. The main problem was trying to style it to look like my 
                     header from the first homework. The other part I had problems with was getting the drop down menu to work. Trying 
                     to figure out how it is connected to the nav router and how to add another link took a lot of time 
-                    to figure out.
-                </p>
-    
-                <p>
+                    to figure out. <br>
+               
                     The smaller parts of the lab were easier. I already had the links change color based on the action from the last 
                     homework. Adding "use strict" to all Javascript code was simple. Since we created different Javascript 
                     files in the lab activity, creating them for this homework did not take long. All of the employee files 
-                    were straight forward and it was easy to convert to my website.
-                </p>
-           
-                <p>
+                    were straight forward and it was easy to convert to my website. <br>
+             
                     Like last week, the sample code and the lab activity was very useful. This homework was very similar 
                     so it was only changing a few things. Also, working with the nav router allowed me to understand it a 
                     lot better than the lab activity.
@@ -103,16 +95,12 @@
                     out how to do it. The first challenge was creating the date changer. I wanted something other than a text box and 
                     button I made that. Since we never learned how to do this, it took some time to understand its functions. The 
                     second thing that was challenging was having the image disappear and show the description. This took me the longest time 
-                    to figure out, but I then realized it had to do with visiblity in the css file.
-                </p>
-            
-                <p>
+                    to figure out, but I then realized it had to do with visiblity in the css file. <br>
+               
                     The rest of the homework was simple since there was a lot of sample code and it was the same as the lab activity and 
                     last weeks homework. Creating the buttons, text boxes and the image did not take long and was straight forward. Making sure 
-                    they were public/private was simple as well.
-                </p>
-            
-                <p>
+                    they were public/private was simple as well. <br>
+               
                     As I said previously, there was a lot of source code and it helped a lot when I got stuck on something. Also the lectures 
                     help a lot since she explained everything that was in the code and made sure we understoon the concepts.
                 </p>
@@ -123,22 +111,16 @@
 
                 <h3><u>Homework 4</u></h3>
                 <p>
-                    This homework was very simple, I did not have any problems with creating the database table.
-                </p>
-            
-                <p>
+                    This homework was very simple, I did not have any problems with creating the database table. <br>
+               
                     The entire homework was very easy since it was just a continuation of the lab activity. Creating the table, 
                     the foreign key, adding records, creating errors and joining the tables had already been done before. If I couldn't remember how to do something
-                    then I would just be able to look back at the lab activity.
-                </p>
-            
-                <p>
+                    then I would just be able to look back at the lab activity. <br>
+               
                     The tutorial that is on the professors website was useful for figuring out certain parts. When I coulding remember how to join  
                     tables, I was able to look back at the document. Also, as I said previously, the lab activity document was very useful for 
-                    remembering how to complete tasks.
-                </p>
-            
-                <p>
+                    remembering how to complete tasks. <br> <br>
+               
                     Click <a target="_blank" href='Nuss_Web_Database.pdf'>here</a> to see my database document
                 </p>
 
@@ -152,19 +134,37 @@
                     little difficult were combining the filter and the click sort. I had both of them separately, but combining them together 
                     was difficult since I didn't want to mess up the code I already had. I also had some trouble with making it reversible when clicking 
                     on a column again. There were not other big problems when creating the table, but I did have a lot of small problems that I continuously 
-                    had to fix.
-                </p>
-                    
-                <p>
+                    had to fix. <br>
+                
                     This homework was relatively easy since there was a lot of sample code to look at. Creating the table, making it filterable, and 
                     clicksortable (separately), using AJAX, and using the Nav Router were easily completed. Much of it was done in the lab activity 
-                    and I was able to use that to complete it.
-                </p>
-            
-                <p>
+                    and I was able to use that to complete it. <br>
+               
                     The resources provided were very helpful since it provided a lot of the code required. The lab activity that was very similar 
                     and I relied on that a lot to complete it. Also, the professors website was helpful since it explained all of the topics and 
                     allowed me to understand it before fully working on it.
+                </p>
+            
+            
+                &nbsp
+            
+            
+                <h3><u>Homework 6</u></h3>
+                <p>
+                    The server side database code included the DbConn.java class, model.userCatalog, and the UserCatalogView.java class. DbConn was used to 
+                    create a connection to my specific database. I had made sure my credentials were the same as my SQL database. model.userCatalog, and the UserCatalogView 
+                    were used to create a select statement and format all the data retrieved from the database. <br>
+               
+                    This weeks homework was not to difficult. This is my first time working with APIs and databases, but there was nothing that was hard to 
+                    complete. With the help of the sample code, I was able to complete the homework easily. The lab activity was almost a completed homework. 
+                    Connecting the database only required a few changes with the username and password, select statement, and formatting. Since the table had already 
+                    been created in previous homeworks, there was nothing new for displaying it. The only part that I got confused with for a bit was accessing the correct object 
+                    since it kept accessing the error message first. <br> <br>
+               
+                    Click <a target="_blank" href="Nuss_Web_Errors.pdf">here</a> to see my error document <br>
+                    Click <a target="_blank" href="webAPIs/listUsersAPI.jsp">here</a> for my List Users Web API <br>
+                    Click <a target="_blank" href="webAPIs/listOtherAPI.jsp">here</a> for my List Catalog API
+            
                 </p>
     `;
                 var ele = document.createElement("div");

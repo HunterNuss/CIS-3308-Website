@@ -1,6 +1,6 @@
 "use strict";
 
-function catalogContent() {
+function liveCatalogContent() {
 
     var content = `
         <style>
@@ -14,10 +14,17 @@ function catalogContent() {
     catalogContainer.classList.add("clickSort");
     ele.appendChild(catalogContainer);
 
-    ajax("json/catalog.json", processData, catalogContainer);
+    ajax("webAPIs/listOtherAPI.jsp", processData, catalogContainer);
 
     function processData(catalogList) {
-
+        if (catalogList.dbError.length > 0) {
+            catalogContainer.innerHTML = catalogList.dbError;
+            return;
+        }
+                
+        catalogList = catalogList.userCatalogList;
+        
+        
         var newCatalogList = [];
 
         for (var i = 0; i < catalogList.length; i++) {
@@ -31,13 +38,8 @@ function catalogContent() {
             newCatalogList[i].Release_Date = SortableTableUtils.makeDate(catalogList[i].releaseDate);
         }
 
-        catalogContainer.appendChild(MakeTable({title: "Catalog", objList: newCatalogList, sortOrderPropName: "Email", sortIcon: "icons/sortUpDown16.png"}), "catalogContent");
+        catalogContainer.appendChild(MakeTable({title: "Live Catalog", objList: newCatalogList, sortOrderPropName: "Email", sortIcon: "icons/sortUpDown16.png"}), "catalogContent");
     }
 
     return ele;
 }
-
-//var title = params.title || " ";
-//    var objList = params.objList || [];
-//    var sortOrderPropName = params.sortOrderPropName || objList[0];
-//    var sortIcon = params.sortIcon;

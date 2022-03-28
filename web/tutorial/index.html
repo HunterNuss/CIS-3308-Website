@@ -6,12 +6,129 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Tutorial Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="download/library.css">
     </head>
     <body>
-        <div>TODO write content</div>
+        <style>
+            body {
+                background-image: url("../pictures/bookshelf.png");    
+                background-repeat: no-repeat; /* does not repeat the image */
+                background-attachment: fixed;
+                background-size: cover; /* covers the enitre body */
+                background-position: bottom center;
+            }
+
+            .content {
+                color: white; /* font */
+                font-family: "Verdana", "Verdana", Sans-Serif;
+                font-size:20px;
+
+            }
+
+            .content a:link { /* changes the content links when its not clicked */
+                color: blue;
+            }
+
+            .content a:visited { /* changes the content links when it has been visited */
+                color: lightblue;
+            }
+
+            .content a:hover { /* changes the content links when the cursor is hovering over it */
+                color: white;
+            }
+
+
+        </style>
+
+        <div class ="content">
+            <h1>Library Component</h1>
+
+
+            <h2>What it is</h2>
+            <p>
+                The library component is a way of displaying a long list of books with authors names and being able to filter through them. 
+                The component itself contains a list of that can be any length and displays them one after another. There is also a search bar to look for 
+                any book in the list. This is an efficient way to search through a long list of novels. Also if the user wants to be able to search 
+                for a specific author they can.
+                
+                Within the component there is a search bar, a list of clickable books. When a book is clicked, it displays a modal which includes a slideshow and a 
+                zoom feature. When clicking on the images of the slideshow, the user will be able to zoom in a specific area of the image which can 
+                be moved.    
+            </p>
+
+            <br>
+
+            <h2>How to use it</h2>
+
+            <p>
+                how to use it (e.g., how someone can specify input
+                parameters to get the kind of component they want from your flexible, reusable component).
+            </p>
+
+            <br>
+
+
+            <h2>Demo</h2>
+
+            <a target="_blank" href="download/demo.html">Here</a> is the link to the component demo. 
+
+            <br>
+            <br>
+
+            <h2>Download</h2>
+
+            <br>
+
+            <h2>Code Snippets</h2>
+            <h3>Modal</h3>
+            <p>
+                A modal is essentially a pop up on the screen. It is an element that is in front of all other content on the page. 
+                It either blurs or dims the background so the users focus is only on the modal. Since the modal is an DOM element 
+                it can contain other elements to display anything.
+                
+                When modals are built, their display should be none since it is always hidden until an action opens it. To open it 
+                the display is then set to 'block'. With most modals there are easy ways to close them. In this example, the user can 
+                click the x in the upper right hand corner or click outside the modal to close it.
+            </p>
+            
+            <h3>Slideshow</h3>
+            <p>
+                The slideshow is a combination of images that are all displayed at different times. The slideshow should be an element 
+                that contains the images and some way to navigate through the images. 
+                
+                When creating a slideshow, all images display should be set to 'none' so all the images don't show up. Then when track the 
+                index of the image and open that specific image. In this example, there are two arrows to navigate through the images. 
+                When creating the navigation actions, you can determine whether or not the image loops around or just stops the the end of 
+                the slideshow. In this case it stops.
+            </p>
+            
+            <h3>Search</h3>
+            <p>
+                The search feature is a single input element that allow the user to input anything. It doesn't look like a lot and the css 
+                does not require a lot.
+                
+                The way the search bar works is it takes a elements and take looks at the inner text and the text content. It then compares 
+                the users input to the text of the element and if it is the same it displays the element as 'block'. If the element does not match 
+                the input the it sets the display to 'none'.
+                
+                When comparing the input and the text, you can keep it as case sensitive or, in this instance, you can make everything 
+                upper case using 'toUpperCase'.
+            </p>
+            
+            <br>
+
+            <h2>Reference Links</h2>
+            <a target="_blank" href="https://www.w3schools.com/howto/howto_css_modals.asp">Modal</a>: This is the W3Schools Link to the modal<br><br>
+            
+            <a target="_blank" href="https://www.w3schools.com/howto/howto_js_slideshow.asp">Slideshow</a>: This is the W3Schools Link to the slideshow<br><br>
+            
+            <a target="_blank" href="https://www.w3schools.com/howto/howto_js_filter_lists.asp">Filter</a>: This is the W3Schools Link to the filter<br><br>
+            
+            <a target="_blank" href="https://www.w3schools.com/howto/howto_js_image_zoom.asp">Image Zoom</a>: This is the W3Schools Link to the image zoom<br>
+            <a target="_blank" href="https://codepen.io/codemachinist/pen/YZqEaZ">Image Zoom</a>: This is the Codepen Link to the image zoom
+        </div>
     </body>
 </html>

@@ -1,0 +1,52 @@
+[
+    {
+        "title": "The Mist",
+        "author": "Stephen King",
+        "images": ["https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982103521/the-mist-9781982103521_hr.jpg", "https://images-na.ssl-images-amazon.com/images/I/81gODNFD-AS.jpg"]
+    },
+    {
+        "title": "The Road",
+        "author": "Cormac McCarthy",
+        "images": ["https://dboyle93.files.wordpress.com/2014/05/the_road_oprahs_book_club-large.jpg", "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B550%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9780307387899_p2_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D"]
+    },
+    {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "images": ["https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg","https://img.yumpu.com/3710518/1/500x640/fahrenheit-451.jpg", "https://images-na.ssl-images-amazon.com/images/I/91x+qyfhhCL.jpg"]
+    }, 
+    {
+        "title": "A Song of Ice and Fire",
+        "author": "George R.R. Martin",
+        "images": ["https://upload.wikimedia.org/wikipedia/en/d/dc/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg", "https://images-na.ssl-images-amazon.com/images/I/91WpRVzg41L.jpg"]
+    }, 
+    {
+        "title": "The Fellowship of the Ring",
+        "author": "J.R.R. Tolkien",
+        "images": ["https://www.foggypinebooks.com/uploads/6/2/3/9/62392781/s238613979156165194_p3657_i1_w1652.jpeg", "https://images-na.ssl-images-amazon.com/images/I/91t7utqANdL.jpg"]
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "images": ["https://i0.wp.com/americanwritersmuseum.org/wp-content/uploads/2018/02/CK-3.jpg?resize=267%2C400&ssl=1", "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781982146702/the-great-gatsby-9781982146702_xlg-back.jpg"]
+    },
+    {
+        "title": "The Odyssey",
+        "author": "Homer",
+        "images": ["https://images.booksense.com/images/867/268/9780140268867.jpg"]
+    },
+    {
+        "title": "The Shining",
+        "author": "Stephen King",
+        "images": ["http://prodimage.images-bn.com/pimages/9780345806789_p0_v2_s1200x630.jpg"]
+    },
+    {
+        "title": "The Godfather",
+        "author": "Mario Puzo",
+        "images": ["https://images-na.ssl-images-amazon.com/images/I/71Jk3baRdnL.jpg", "https://images-na.ssl-images-amazon.com/images/I/81DRCVBKO8L.jpg"]
+    },
+    {
+        "title": "Catch-22",
+        "author": "Joseph Heller",
+        "images": ["https://images-na.ssl-images-amazon.com/images/I/61taxs6EuWL.jpg", "https://images-na.ssl-images-amazon.com/images/I/71Pi7F7NBXL.jpg"]
+    }
+]

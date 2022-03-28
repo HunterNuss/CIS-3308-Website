@@ -1,26 +1,24 @@
 package model.webUser;
 
-/* The purpose of this class is just to "bundle together" all the 
- * data values that you would get from a single row of a result set
- * from joining the web_user database table with the user_role table. 
+import dbUtils.FormatUtils;
+import java.sql.ResultSet;
 
- * All fields are declared as type String (even fields might be a
- * different type in the database, like date or decimal). We do this 
- * for two reasons: 
- *     1. so we can store nicely formatted data (e.g., with $s in it). 
- *     2. so we can store "pre-validated" data that might not be able to 
- *        be converted to a valid value of the given type, for example 
- *        a user might have made a data entry error.  
+
+/* The purpose of this class is just to "bundle together" all the 
+ * character data that the user might type in when they want to 
+ * add a new Customer or edit an existing customer.  This String
+ * data is "pre-validated" data, meaning they might have typed 
+ * in a character string where a number was expected.
  * 
  * There are no getter or setter methods since we are not trying to
- * protect this data in any way.  We want to let Java/JSP code have have
+ * protect this data in any way.  We want to let the JSP page have
  * free access to put data in or take it out. */
-
 public class StringData {
 
     public String webUserId = "";
     public String userEmail = "";
     public String userPassword = "";
+    public String userPassword2 = "";
     public String image = "";
     public String birthday = "";
     public String membershipFee = "";
@@ -33,4 +31,21 @@ public class StringData {
     public StringData() {
     }
 
+    public int getCharacterCount() {
+        String s = this.webUserId + this.userEmail + this.userPassword + this.userPassword2 + this.image
+                + this.birthday + this.membershipFee + this.userRoleId + this.userRoleType;
+        return s.length();
+    }
+
+    public String toString() {
+        return "Web User Id:" + this.webUserId
+                + ", User Email: " + this.userEmail
+                + ", User Password: " + this.userPassword
+                + ", User Password2: " + this.userPassword2
+                + ", Image: " + this.image
+                + ", Birthday: " + this.birthday
+                + ", Membership Fee: " + this.membershipFee
+                + ", User Role Id: " + this.userRoleId
+                + ", User Role Type: " + this.userRoleType;
+    }
 }

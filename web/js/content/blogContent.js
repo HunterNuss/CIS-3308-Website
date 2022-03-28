@@ -166,6 +166,35 @@
                     Click <a target="_blank" href="webAPIs/listOtherAPI.jsp">here</a> for my List Catalog API
             
                 </p>
+            
+            
+                &nbsp
+            
+            
+                <h3><u>Homework 7</u></h3>
+                <p>
+                    The most difficult part of this homework was working through the server side code. This was done in the lab activity, but completing it was a bit confusing. 
+                    The homework makes sense to me know, but while working on it, calling the APIs and actually setting the session in the APIs didn't make sense at first. There 
+                    was nothing else that was to difficult in this homework, it was just very time consuming. <br>
+                
+                    Like I said previously, everything became clear to me in the end, but when I understood connecting to the database, creating DbMods, and creating the UI for logging 
+                    on. A lot of this homework was repetitive so once you understand one thing, everything else becomes easy. <br>
+            
+                    There were a lot of resources and extra code to help with this homework. A majority of the homework was completed in the lab activities which gave very clear 
+                    instructions on how to complete it. The pseudocode that was given helped a lot since it revolved around the JSP implicit session object. Also the pseudocode for IIFE 
+                    was useful since I had never used it before. <br>
+            
+                    This homework in general was very important since it showed us how alter URLs and access specific accounts from our database. It may have been a long homework, but 
+                    it had to be since it showed us a lot of concepts. <br> <br>
+                    
+                    Click <a href="webAPIs/logonAPI.jsp?email=teaching@temple.edu&password=college">here</a> for my Log On API with valid credentials. <br>
+                    Click <a href="webAPIs/logoffAPI.jsp">here</a> for my Logoff API. <br>
+                    Click <a href="webAPIs/getProfileAPI.jsp">here</a> for my Get Profile API. <br>
+                    Click <a href="webAPIs/listUsersAPI.jsp">here</a> for my List Users API (takes no URL parameters).
+               
+                   
+            
+                </p>
     `;
                 var ele = document.createElement("div");
                 ele.innerHTML = content;

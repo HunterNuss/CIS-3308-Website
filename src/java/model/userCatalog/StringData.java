@@ -16,20 +16,39 @@ package model.userCatalog;
  * protect this data in any way.  We want to let Java/JSP code have have
  * free access to put data in or take it out. */
 public class StringData {
-
-    public String userEmail = "";
+    
     public String bookId = "";
+    public String userEmail = "";
     public String bookTitle = "";
     public String authorName = "";
     public String price = "";
     public String releaseDate = "";
     public String bookImage = "";
     public String description = "";
+    public String webUserId = "";
 
     public String errorMsg = "";
 
+    
     // default constructor leaves all data members with empty string (Nothing null).
     public StringData() {
     }
+    
+    
+//    public int getCharacterCount() {
+//        String s = this.bookTitle + this.authorName + this.price
+//                + this.releaseDate + this.bookImage + this.description + this.webUserId;
+//        return s.length();
+//    }
+//
+//    public String toString() {
+//        return "Book Title: " + this.bookTitle
+//                + ", Author Name: " + this.authorName
+//                + ", Image: " + this.bookImage
+//                + ", Price: " + this.price
+//                + ", Release Date: " + this.releaseDate
+//                + ", Description: " + this.description
+//                + ", User Web Id: " + this.webUserId;
+//    }
 
 }

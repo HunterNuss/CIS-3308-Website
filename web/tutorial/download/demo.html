@@ -6,25 +6,45 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Tutorial Demo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="library.css">
     </head>
     <body>
-        
-<!--        <div id="container">
-            <button id="book">Book 1</button>
+        <style>
+            .library {
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
 
-            
-        </div>-->
-        
-        
+        <div id ="library">
+
+        </div>
+
+
         <script>"user script"</script>
 
         <script src="MakeLibrary.js"></script>
+        <script src="ajax.js"></script>
+
+
 
         <script>
-           
+            var libraryContainer = document.getElementById("library");
+
+            ajax("library.json", processData, libraryContainer);
+
+            function processData(libraryList) {
+                var newObj = {library: libraryList};
+
+                libraryContainer.appendChild(MakeLibrary(newObj));
+            }
         </script>
     </body>
 </html>

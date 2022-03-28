@@ -26,7 +26,7 @@ function liveCatalogContent() {
         
         
         var newCatalogList = [];
-
+        
         for (var i = 0; i < catalogList.length; i++) {
             newCatalogList[i] = {};
             newCatalogList[i].Email = SortableTableUtils.makeText(catalogList[i].userEmail);

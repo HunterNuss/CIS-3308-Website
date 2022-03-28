@@ -1,11 +1,12 @@
 package model.webUser;
 
-import model.webUser.StringData;
 import java.util.ArrayList;
+import java.sql.ResultSet;
 
-// This class holds a possible database error message followed by an array of objects 
-// (each object being a single row in a result set extracted from a database). 
 
+// The purpose of this class is to have a nice java object that can be converted to JSON 
+// to communicate everything necessary to the web page (the array of users plus a possible 
+// list level database error message). 
 public class StringDataList {
 
     public String dbError = "";
@@ -20,4 +21,5 @@ public class StringDataList {
     public void add(StringData stringData) {
         this.webUserList.add(stringData);
     }
+
 }

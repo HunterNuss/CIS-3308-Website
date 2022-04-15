@@ -43,7 +43,19 @@ and open the template in the editor.
             function processData(libraryList) {
                 var newObj = {library: libraryList};
 
-                libraryContainer.appendChild(MakeLibrary(newObj));
+                var library1 = MakeLibrary(newObj);
+                libraryContainer.appendChild(library1);
+                library1.setFontStyle("cursive");
+
+                libraryContainer.appendChild(document.createElement("br"));
+
+                var library2 = MakeLibrary(newObj);
+                libraryContainer.appendChild(library2);
+                //original size is 10;
+                library2.setSize(15);
+
+
+//                libraryContainer.appendChild(MakeLibrary(newObj));
             }
         </script>
     </body>

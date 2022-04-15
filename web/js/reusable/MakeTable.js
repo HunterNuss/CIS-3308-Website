@@ -6,13 +6,15 @@ function MakeTable(params) {
     if (!params) {
         params = {};
     }
-    
+
     var title = params.title || " ";
     var objList = params.objList || [];
     var sortOrderPropName = params.sortOrderPropName || objList[0];
     var sortIcon = params.sortIcon;
-    
-    
+    var insertIcon = params.insertIcon || "";
+    var route = params.route || "";
+
+
     function jsSort(objList, byProperty, orderDirection) {
 
         if (!objList || !objList[0]) {
@@ -37,18 +39,18 @@ function MakeTable(params) {
             alert(message);
             return;
         }
-        
+
         objList.sort(function (q, z) {
             var qVal = q[byProperty].sortOrder;
             var zVal = z[byProperty].sortOrder;
             var tmp = null;
-            
+
             if (orderDirection) {
                 tmp = qVal;
                 qVal = zVal;
                 zVal = tmp;
             }
-                
+
             var c = 0;
             if (qVal > zVal) {
                 c = 1;
@@ -71,8 +73,8 @@ function MakeTable(params) {
 
         for (var prop in obj) {
             if (prop[0] !== "_") {
-                var propVal = obj[prop].innerHTML; 
-                var propValUpper = propVal.toUpperCase(); 
+                var propVal = obj[prop].innerHTML;
+                var propValUpper = propVal.toUpperCase();
 
                 console.log("checking if " + searchKeyUpper + " is in " + propValUpper);
 
@@ -80,7 +82,7 @@ function MakeTable(params) {
                     console.log("Yes it is inside");
                     return true;
                 }
-            } 
+            }
         }
         console.log("no it is not inside");
         return false;
@@ -122,8 +124,23 @@ function MakeTable(params) {
     var container = document.createElement("div");
 
     var heading = document.createElement("h2");
-    heading.innerHTML = title;
+    heading.innerHTML = title + "   ";
     container.appendChild(heading);
+
+    if (insertIcon.length != 0) {
+        var insertButton = document.createElement("button");
+        insertButton.innerHTML = "<img src='" + insertIcon + "'/> ";
+        insertButton.style.border = "transparent";
+        heading.appendChild(insertButton);
+
+        if (route.length != 0) {
+            insertButton.onclick = function () {
+                window.location.hash = route;
+            };
+        }
+
+    }
+
 
     var searchDiv = document.createElement("div");
     container.appendChild(searchDiv);
@@ -161,6 +178,7 @@ function MakeTable(params) {
 
 
     addTableBody(newTable, objList, sortOrderPropName, "");
+
 
 
 

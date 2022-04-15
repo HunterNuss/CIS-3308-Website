@@ -1,10 +1,10 @@
 package view;
 
 // classes imported from java.sql.*
-import model.userCatalog.StringData;
-import model.userCatalog.StringDataList;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import model.userCatalog.*;
 
 // classes in my project
 import dbUtils.*;
@@ -20,7 +20,7 @@ public class UserCatalogView {
         StringData sd = new StringData();
         
         try {
-            String sql = "SELECT user_email, book_id, book_title, book_image, author_name, price, release_date, description "
+            String sql = "SELECT user_email, book_id, book_title, book_image, author_name, price, release_date, description, user_catalog.web_user_id "
                     + "FROM user_catalog, web_user "
                     + "WHERE web_user.web_user_id = user_catalog.web_user_id ORDER BY book_id ";
                                 
@@ -43,13 +43,14 @@ public class UserCatalogView {
                 sd.price = FormatUtils.formatDollar(results.getObject("price"));
                 sd.releaseDate = FormatUtils.formatDate(results.getObject("release_date"));
                 sd.description = FormatUtils.formatString(results.getObject("description"));
+                sd.webUserId = FormatUtils.plainInteger(results.getObject("web_user_id"));
 
                 sdl.add(sd);
             }
             results.close();
             stmt.close();
         } catch (Exception e) {
-            sd.errorMsg = "Exception thrown in WebUserView.getAllUsers(): " + e.getMessage();
+            sd.errorMsg = "Exception thrown in UserCatalog.getAllBooks(): " + e.getMessage();
             sdl.add(sd);
         }
         return sdl;

@@ -12,6 +12,9 @@
         <link rel="stylesheet" type="text/css" href="style/clickSort.css">
         <link rel="stylesheet" type="text/css" href="style/book.css">
         <link rel="stylesheet" type="text/css" href="style/account.css">
+        <link rel="stylesheet" type="text/css" href="style/modalStyle.css">
+
+        
 
 
 
@@ -38,23 +41,31 @@
 
         <script>"use strict";</script>
 
+        <script src="js/reusable/MakeBook.js"></script>
+        <script src="js/reusable/MakeEditArea.js"></script>
+        <script src="js/reusable/MakeTable.js"></script>
+        <script src="js/reusable/MakeEmp.js"></script>
+        <script src="js/reusable/MakeNavRouter.js"></script>
+        <script src="js/reusable/SortableTableUtils.js"></script>
+        <script src="js/reusable/Utils.js"></script>
+        <script src="js/reusable/ajax.js"></script>
+        <script src="js/reusable/modalFw.js"></script>
+
+
         <script src="js/content/account.js"></script>
         <script src="js/content/blogContent.js"></script>
         <script src="js/content/bookContent.js"></script>
         <script src="js/content/catalogContent.js"></script>
+        <script src="js/content/catalogMods.js"></script>
         <script src="js/content/empContent.js"></script>
         <script src="js/content/homeContent.js"></script>
         <script src="js/content/liveCatalogContent.js"></script>
         <script src="js/content/liveUserContent.js"></script>
         <script src="js/content/userContent.js"></script>
+        <script src="js/content/webUserMods.js"></script>
 
 
-        <script src="js/reusable/MakeBook.js"></script>
-        <script src="js/reusable/MakeTable.js"></script>
-        <script src="js/reusable/MakeEmp.js"></script>
-        <script src="js/reusable/MakeNavRouter.js"></script>
-        <script src="js/reusable/SortableTableUtils.js"></script>
-        <script src="js/reusable/ajax.js"></script>
+
 
 
 
@@ -66,13 +77,12 @@
 
                 // action attribute is a function name - no quotes aroudnd home.
                 {linkText: "Home", linkURL: "#/home", action: homeContent},
-                // action attribute is a function name - no quotes around blog.
-                {linkText: "Blog", linkURL: "#/blog", action: blogContent},
+                
                 // Adding search to the header, and having the employee link under it.
 
                 {header: 'Account',
                     subMenu: [
-                        {linkText: "Register"},
+                        {linkText: "Register", linkURL: "#/register", action: webUserMods.insert},
                         {linkText: "Log On", linkURL: "#/logon", action: account.logon},
                         {linkText: "Log Off", linkURL: "#/logoff", action: account.logoff},
                         {linkText: "Profile", linkURL: "#/profile", action: account.getProfile}
@@ -96,7 +106,10 @@
                         {linkText: "Tutorial Home", linkURL: "#/tutHome", action: "tutorial/index.html"},
                         {linkText: "Demo", linkURL: "#/tutDemo", action: "tutorial/download/demo.html"}
                     ]
-                }
+                },
+                
+                // action attribute is a function name - no quotes around blog.
+                {linkText: "Blog", linkURL: "#/blog", action: blogContent}
 
             ];
             var myNav = MakeNavRouter({
@@ -105,6 +118,22 @@
                 contentId: "content", // the id where content is to be injected
                 startLink: "#/home"     // routing will set this as the first link. 
             });
+            
+            myNav.addRoute({
+                linkURL: "#/insertCatalog",
+                action: catalogMods.insert
+            });
+            
+            myNav.addRoute({
+                linkURL: "#/userUpdate",
+                action: webUserMods.update
+            });
+            
+            myNav.addRoute({
+                linkURL: "#/catalogUpdate",
+                action: catalogMods.update
+            });
+                        
 
         </script>  
     </body>

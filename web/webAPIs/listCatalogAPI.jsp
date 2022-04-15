@@ -1,4 +1,3 @@
-<%@page import="view.UserCatalogView"%>
 <%@page contentType="application/json; charset=UTF-8" pageEncoding="UTF-8"%> 
 
 <%@page language="java" import="dbUtils.DbConn" %>

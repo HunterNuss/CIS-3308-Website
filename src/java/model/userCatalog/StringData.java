@@ -35,20 +35,20 @@ public class StringData {
     }
     
     
-//    public int getCharacterCount() {
-//        String s = this.bookTitle + this.authorName + this.price
-//                + this.releaseDate + this.bookImage + this.description + this.webUserId;
-//        return s.length();
-//    }
-//
-//    public String toString() {
-//        return "Book Title: " + this.bookTitle
-//                + ", Author Name: " + this.authorName
-//                + ", Image: " + this.bookImage
-//                + ", Price: " + this.price
-//                + ", Release Date: " + this.releaseDate
-//                + ", Description: " + this.description
-//                + ", User Web Id: " + this.webUserId;
-//    }
+    public int getCharacterCount() {
+        String s = this.bookTitle + this.authorName + this.price
+                + this.releaseDate + this.bookImage + this.description + this.webUserId;
+        return s.length();
+    }
+
+    public String toString() {
+        return "Book Title: " + this.bookTitle
+                + ", Author Name: " + this.authorName
+                + ", Image: " + this.bookImage
+                + ", Price: " + this.price
+                + ", Release Date: " + this.releaseDate
+                + ", Description: " + this.description
+                + ", Web User Id: " + this.webUserId;
+    }
 
 }

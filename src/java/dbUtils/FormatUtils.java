@@ -23,35 +23,35 @@ public class FormatUtils {
             dateformat.setLenient(false);
             return dateformat.format(dateval);
         } catch (Exception e) {
-            return "bad date in FormatUtils.formatDate: " + obj.toString() + ". Error: " + e.getMessage();
+            return "bad date in FormatUtils.formatDate: " + obj.toString() + " error: " + e.getMessage();
         }
     } // formatDate
 
     public static String formatDollar(Object obj) {
-
         // null gets converted to empty string
         if (obj == null) {
             return "";
         }
+        BigDecimal bd = (BigDecimal) obj;
         try {
-            BigDecimal bd = (BigDecimal) obj;
             DecimalFormat intFormat = new DecimalFormat("$###,###,###,##0.00");
             return intFormat.format(bd);
         } catch (Exception e) {
-            return "bad Dollar Amount in FormatUtils:" + obj.toString() + ". Error:" + e.getMessage();
+            return "bad Dollar Amount in FormatUtils:" + obj.toString() + " Error:" + e.getMessage();
         }
     } // formatDollar
 
     public static String formatInteger(Object obj) {
         if (obj == null) {
             return "";
-        }
-        try {
-            Integer ival = (Integer) obj;
-            DecimalFormat intFormat = new DecimalFormat("###,###,###,##0");
-            return intFormat.format(ival);
-        } catch (Exception e) {
-            return "bad Integer in FormatUtils:" + obj.toString() + ". Error:" + e.getMessage();
+        } else {
+            try {
+                Integer ival = (Integer) obj;
+                DecimalFormat intFormat = new DecimalFormat("###,###,###,##0");
+                return intFormat.format(ival);
+            } catch (Exception e) {
+                return "bad Integer in FormatUtils:" + obj.toString() + " Error:" + e.getMessage();
+            }
         }
     } // formatInteger
 
@@ -59,12 +59,13 @@ public class FormatUtils {
     public static String plainInteger(Object obj) {
         if (obj == null) {
             return "";
-        }
-        try {
-            Integer ival = (Integer) obj;
-            return ival.toString();
-        } catch (Exception e) {
-            return "bad Integer in FormatUtils:" + obj.toString() + ". Error:" + e.getMessage();
+        } else {
+            try {
+                Integer ival = (Integer) obj;
+                return ival.toString();
+            } catch (Exception e) {
+                return "bad Integer in FormatUtils:" + obj.toString() + " Error:" + e.getMessage();
+            }
         }
     } // formatInteger
 
@@ -72,11 +73,8 @@ public class FormatUtils {
     public static String formatString(Object obj) {
         if (obj == null) {
             return "";
-        }
-        try {
+        } else {
             return (String) obj;
-        } catch (Exception e) {
-            return "bad String in FormatUtils:" + obj.toString() + ". Error:" + e.getMessage();
         }
     } // formatString
 

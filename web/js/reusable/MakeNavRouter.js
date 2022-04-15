@@ -1,5 +1,3 @@
-"use strict";
-
 function MakeNavRouter(params) {
 
 
@@ -29,8 +27,6 @@ function MakeNavRouter(params) {
             routes[linkObj.linkURL] = linkObj.action;
 
         }
-
-
 
         return aTag;
 

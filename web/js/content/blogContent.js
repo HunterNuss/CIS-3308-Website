@@ -191,9 +191,61 @@
                     Click <a href="webAPIs/logoffAPI.jsp">here</a> for my Logoff API. <br>
                     Click <a href="webAPIs/getProfileAPI.jsp">here</a> for my Get Profile API. <br>
                     Click <a href="webAPIs/listUsersAPI.jsp">here</a> for my List Users API (takes no URL parameters).
-               
-                   
+                </p>
             
+            
+                &nbsp
+            
+            
+                <h3><u>Tutorial / Homework 8</u></h3>
+                <p>
+                    The tutorial had a lot of difficult parts from the poc to the final component. For the poc, it was difficult to combine all of the elements to 
+                    make the work together. When making it resuable, it was pretty straight forward. The hardest part of the project was adding the filter component 
+                    and having a for loop inside the component to generate all divs instead of in the HTML. I spent so long trying to find a way to save all data when it was 
+                    being generated in each iteration of the for loop. In the end it was a very simple fix, but the process getting there took a long time. <br>
+            
+                    The few easy parts of the homework includes creating each individual component and turning the poc into a resuable component. Before I added the 
+                    filter feature, the overall component was very simple making it reusable since it was just creating elements instead of referencing them. <br>
+            
+                    This homework was very important since it allowed me to work on a component without using code given to me. This was the first real experience of making 
+                    something that was my own and it gave me a better understanding of what it takes to make a component.
+                </p>
+            
+                
+                &nbsp
+            
+            
+                <h3><u>Homework 9</u></h3>
+                <p>
+                    The only part of this homework that was difficult was the amount of parts to it. Since there were so many sections, it was had to tell if I completed 
+                    it or not. There were also a lot of changes to previous files and these small changes make it a bit complicated since they were required. If one thing was 
+                    not changed, then the overall homework wouldn't work. <br>
+            
+                    Overall thhis homework was easy since a majority of it was done in the lab activity and previous homeworks. With all of the API's already completed and the 
+                    layout for the update input, there wasn't much to complete. As said previously there were only small parts to add. <br>
+            
+                    This homework was important though since it showed me that even with everything working at one point, adding another part of it could drastically change things. 
+                    Completing this homework required many files to be changed an without those changes, nothing would have worked. I was useful to know how to implement these 
+                    different additions.
+                </p>
+            
+            
+                &nbsp
+
+
+                <h3><u>Homework 10</u></h3>
+                <p>
+                    This homework was not that difficult since it was very similar to the update homework. The only confusing part was trying to connect all of the pieces. Other homeworks 
+                    had a lab activity which made it easier to complete. Finding all of the files that needed to be changed and functions that need to be added took a bit of time. Also adding 
+                    the column to the table was a bit different since it didn't need to go to another link. This wasn't to difficult to understand, but it took some time to realize.
+
+                    The rest of the homework was easy since it was the same stuff we were doing the past few qeeks. The API's were essentially the same as all of the others. The delete function in 
+                    DbMods was easier than the other functions since it only revolved around the one id. The delete js function was easier than the other homeworks since it just deletes the row of the 
+                    table.
+            
+                    Since there was no lab activity it was a bit confusing at first, those usually help with starting the homework. The sample code was very useful since it showed me how to 
+                    complete a majority of the web user part.
+                    
                 </p>
     `;
                 var ele = document.createElement("div");

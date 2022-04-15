@@ -1,4 +1,7 @@
 // parmas: an object containing title, author, and images
+// title: a string (required)
+// author: a string (required)
+// images: an array (required)
 
 "use strict";
 function MakeLibrary(params) {
@@ -58,7 +61,6 @@ function MakeLibrary(params) {
 
         // accesses the title of each book
         let title = libraryList[i].title;
-        console.log(title);
         if (title.length == 0) {
             alert("Must include title name in object");
             return;
@@ -66,8 +68,6 @@ function MakeLibrary(params) {
 
         // accesses the author of each book
         let author = libraryList[i].author;
-        console.log(author);
-
         if (author.length == 0) {
             alert("Must include author name in object");
             return;
@@ -75,8 +75,6 @@ function MakeLibrary(params) {
 
         // accesses the images of each book
         let images = libraryList[i].images;
-        console.log(images);
-
         if (images.length == 0) {
             alert("Must include at least one image in object");
             return;
@@ -93,7 +91,7 @@ function MakeLibrary(params) {
         if (title.length > 22) {
             title = title.substring(0, 19) + "...";
         }
-        
+
         if (author.length > 22) {
             author = author.substring(0, 19) + "...";
         }
@@ -155,8 +153,6 @@ function MakeLibrary(params) {
 
 
 
-
-
         // div contains all sets of images
         let imgZoomBox = document.createElement("div");
         imgZoomBox.classList.add("imgZoomBox");
@@ -179,22 +175,21 @@ function MakeLibrary(params) {
 
             // creates the img element
             srcArray[j] = document.createElement("img");
-            srcArray[j].classList.add("img1");
+            srcArray[j].classList.add("originalImg");
             slides[j].appendChild(srcArray[j]);
-            
+
 
             //assigns each image to an index
             srcArray[j].src = images[j];
-                        
+
         }
+
 
 
         // creates the zoomed in image
         let zoomedImg = document.createElement("div");
-        zoomedImg.classList.add('img2');
+        zoomedImg.classList.add('zoomedImg');
         imgZoomBox.appendChild(zoomedImg);
-
-
 
 
 
@@ -296,6 +291,7 @@ function MakeLibrary(params) {
 
         }
 
+
         // calls the event listener when the mouse moves
         // event listener calls the zoom event functions which will get the proper location
         let zoom = function () {
@@ -385,6 +381,19 @@ function MakeLibrary(params) {
                 // if it is not the same, the display changes to none
                 bookElements[i].style.display = "none";
             }
+        }
+    };
+
+
+    ele.setSize = function (size) {
+        for (var i = 0; i < bookElements.length; i++) {
+            bookElements[i].style.width = "" + size + "rem";
+        }
+    };
+
+    ele.setFontStyle = function (font) {
+        for (var i = 0; i < bookElements.length; i++) {
+            bookElements[i].style.fontFamily = font;
         }
     };
 
